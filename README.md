@@ -1,0 +1,2 @@
+# theme
+A Hugo theme
