@@ -2,6 +2,7 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "Example Site"
+theme = "steady-bytes"
 
 # Navigation Bar
 [[menu.main]]
