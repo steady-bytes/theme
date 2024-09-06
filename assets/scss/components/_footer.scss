@@ -1,0 +1,192 @@
+.footer {
+  position: relative;
+  padding: 220px 0 120px;
+  overflow: hidden;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="868" viewBox="0 0 1920 868"> <defs> <clipPath id="clip-path"> <rect id="Rectangle_2205" data-name="Rectangle 2205" width="1920" height="868" transform="translate(0 7532)" fill="rgb(255, 255, 255)"/> </clipPath> </defs> <g id="Group_1168" data-name="Group 1168" transform="translate(0 -7532)"> <g id="Mask_Group_3" data-name="Mask Group 3" clip-path="url(%23clip-path)"> <path id="Path_1345" data-name="Path 1345" d="M2379.667,886.706c6.874,155.068,105.521,234.116,191.059,363.643,215.719,326.657,43.144,782.737-246.528,825.88-294.888,43.92-124.573,475.244-610.615,539.715-704.623,93.467-1123.717-337.918-1232.588-818.266-75.052-331.106-20.9-396.72-245.377-569.234C-247.494,857.161,96.132,101.294,516.456,21.375,611.518,3.39,769.2-40.439,1281.57,94.059c338.224,88.783,648.176-76.378,900.871,145.5S2372.767,731.159,2379.667,886.706Z" transform="translate(-378.517 7653.021) rotate(-7)" fill="%23#{$footer-color}"/> </g> <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(%23clip-path)"> <path id="Path_1346" data-name="Path 1346" d="M2379.667,886.706c6.874,155.068,105.521,234.116,191.059,363.643,215.719,326.657,43.144,782.737-246.528,825.88-294.888,43.92-124.573,475.244-610.615,539.715-704.623,93.467-1123.717-337.918-1232.588-818.266-75.052-331.106-20.9-396.72-245.377-569.234C-247.494,857.161,96.132,101.294,516.456,21.375,611.518,3.39,769.2-40.439,1281.57,94.059c338.224,88.783,648.176-76.378,900.871,145.5S2372.767,731.159,2379.667,886.706Z" transform="translate(-254.397 7647.584) rotate(-7)" fill="none" stroke="%23273437" stroke-width="1.5"/> </g> </g> </svg>');
+  background-position: top center;
+  background-size: cover;
+  @include mobile {
+    padding: 120px 0 50px;
+  }
+  &-subscribe {
+    &-title {
+      h2 {
+        text-align: center;
+        margin: 0px 0 60px;
+        @include tablet {
+          font-size: 35px;
+        }
+      }
+    }
+
+    &-form {
+      .from-group {
+        margin-bottom: 100px;
+        position: relative;
+
+        .input-group {
+          padding: 0;
+
+          .form-control {
+            position: relative;
+            border-radius: 10px;
+            border: none;
+            padding: 20px 200px 20px 40px;
+            background: #fff;
+            width: 70%;
+            z-index: 0;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+            height: 80px;
+            @include mobile {
+              padding: 20px 150px 20px 20px;
+            }
+          }
+
+          .subscribe {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            @include mobile-xs {
+              right: 5px;
+            }
+
+            button {
+              height: 60px;
+              padding: 10px 30px;
+              box-shadow: 0px 8px 20px rgba(255, 115, 128, 0.3);
+              background: $primary-color;
+              font-weight: 600;
+              color: $white;
+              display: flex;
+              align-items: center;
+              z-index: 9;
+              overflow: hidden;
+              @include mobile-xs {
+                padding: 10px 15px;
+              }
+
+              .icon-left {
+                transform: translateX(-50px);
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+              }
+              .icon-center {
+                transition: all 0.5s ease-in-out;
+              }
+              &:hover {
+                transform: scale(1.02);
+                .icon-left {
+                  transform: translateX(20px);
+                  opacity: 1;
+                }
+                .icon-center {
+                  transform: translateX(50px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    max-width: 50%;
+  }
+
+  .footer-description {
+    @include tablet {
+      text-align: center;
+    }
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #7a8081;
+      line-height: 36px;
+    }
+
+    &-social {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        a {
+          display: block;
+          color: $text-color;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: $text-color-dark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-widget {
+    @include tablet {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    h4 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      @include mobile {
+        font-size: 17px;
+      }
+    }
+
+    &-list {
+      text-align: left;
+
+      @include tablet {
+        text-align: center;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          a {
+            color: $text-color;
+            text-decoration: none;
+            display: block;
+            transition: all.5s ease-in-out;
+            padding: 10px 0;
+            @include mobile {
+              font-size: 15px;
+            }
+
+            &:hover {
+              color: $text-color-dark;
+            }
+          }
+
+          i {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+# MAIN base
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Example Site"
+
+# Navigation Bar
+[[menu.main]]
+    name = "Home"
+    url = "#hero"
+    weight = 1
+[[menu.main]]
+    name = "Features"
+    url = "#feature"
+    weight = 2
+[[menu.main]]
+    name = "FAQ"
+    url = "#faq"
+    weight = 3
+[[menu.main]]
+    name = "Blog"
+    url = "#blog"
+    weight = 4
+
+# Footer Sitemap
+[[menu.sitemap]]
+    name = "Home"
+    url = "#"
+    weight = 1
+[[menu.sitemap]]
+    name = "Blog"
+    url = "/blog"
+    weight = 2
+[[menu.sitemap]]
+    name = "Privacy Policy"
+    url = "/privacy"
+    weight = 3
+[[menu.sitemap]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
+
+# Footer Contact Info
+[params.info]
+enableAddress = true
+address = "123 Main St, New York, USA"
+enableEmail = true
+email = "hello@example.com"
+enablePhone = true
+phone = "+1 (800) 123-4567"
+
+# Footer Social
+[params.social]
+enableFacebook = true
+facebook = "#"
+enableTwitter = false
+twitter = "#"
+enableGithub = true
+github = "https://github.com/steady-bytes/theme"
+
+[params]
+
+# Header
+logo = "images/logo.png"
+
+# Footer
+footerTitle = "Keep up to date"
+copyright1 = "All rights reserved"
+copyright2 = "Copyright ©  <a href=\"https://example.com/\" target=\"_blank\">Example Company </a> {year}"
+
+# Contact
+email = "hello@example.com"

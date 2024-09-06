@@ -1,0 +1,12 @@
+name = "steady-bytes-hugo-theme"
+license = "MIT"
+licenselink = "https://github.com/steady-bytes/theme/blob/main/LICENSE"
+description = ""
+homepage = "https://steady-bytes.io/"
+tags = ['clean', 'minimal', 'agency', 'corporate', 'creative agency', 'creative studio', 'portfolio', 'staticmania', 'responsive', 'blog', 'customizable', 'company', 'creative', 'agency template']
+features = ['bootstrap 4', 'responsive design', 'blog', 'responsive','landing-page', 'minimal', 'business', 'agency-template', 'hugo-theme', 'portfolio', 'company', 'creative', 'contact-form']
+min_version = "0.41.0"
+
+[author]
+  name = "Static Mania"
+  homepage = "https://staticmania.com/"
