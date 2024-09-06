@@ -10,7 +10,8 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          {{ range first 3 $.Site.RegularPages }}
+          <!-- TODO: make this default to 3 pages and adapt if there are fewer -->
+          {{ range first 1 $.Site.RegularPages }}
           <div class="col-lg-4 col-md-6">
             <article class="blog-post-item">
               <div class="blog-post-thumb">
