@@ -21,7 +21,7 @@ git submodule add https://github.com/steady-bytes/theme.git themes/steady-bytes
 Copy the example site from the theme:
 
 ```shell
-cp -r themes/steady-bytes/example/* .
+cp -r themes/steady-bytes/example/. .
 ```
 
 Run the site in development mode and access the site at the provided link in the logs:
