@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+<html lang = "{{ .Site.LanguageCode }}">
+
 {{ partial "heroArea.html" . }}
 
 {{ partial "feature.html" . }}
@@ -15,5 +17,7 @@
 {{ partial "testimonial.html" . }}
 
 {{ partial "blogPost.html" . }}
+
+</html>
 
 {{ end }}

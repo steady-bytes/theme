@@ -64,8 +64,8 @@
                   {{ end }}
                   <img
                     class="feature-image-focus"
-                    src={{ .image }}
-                    alt="feature-image"
+                    src={{ .image.src }}
+                    alt={{ .image.alt }}
                   />
                   {{ if (eq .position "right")}}
                   {{ else }}
