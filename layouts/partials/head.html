@@ -4,6 +4,9 @@
   <meta name="keywords" content={{ .Keywords }}>
   <title>{{ .Title }}</title>
 
+  {{ if (ne .Site.Params.Analytics.plausibleDomain "")}}
+  <script defer data-domain={{ .Site.Params.Analytics.plausibleDomain }} src={{ .Site.Params.Analytics.plausibleSrc }}></script>
+  {{ end }}
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
