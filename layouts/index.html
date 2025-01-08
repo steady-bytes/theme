@@ -2,10 +2,6 @@
 
 <html lang = "{{ .Site.LanguageCode }}">
 
-{{ range .Site.Params.mastodon.accounts }}
-<a hidden rel="me" href="{{ . }}">
-{{ end }}
-
 {{ partial "heroArea.html" . }}
 
 {{ partial "feature.html" . }}
