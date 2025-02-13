@@ -4,6 +4,12 @@
   <meta name="keywords" content={{ .Keywords }}>
   <title>{{ .Title }}</title>
 
+  {{ if (ne .Params.featureImage "")}}
+  <link rel="image_src" href={{ .Params.featureImage }} />
+  {{ else }}
+  <link rel="image_src" href={{ .Site.Params.logo }} />
+  {{ end }}
+
   {{ if (ne .Site.Params.Analytics.plausibleDomain "")}}
   <script defer data-domain={{ .Site.Params.Analytics.plausibleDomain }} src={{ .Site.Params.Analytics.plausibleSrc }}></script>
   {{ end }}
