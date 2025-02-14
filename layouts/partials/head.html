@@ -4,8 +4,8 @@
   <meta name="keywords" content={{ .Keywords }}>
   <meta property="og:title" content={{ .Title }} />
   <meta property="og:description" content={{ .Description }} />
-  {{ if .Params.featureImage}}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.featureImage }}" />
+  {{ if .Params.ogImage}}
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogImage }}" />
   {{ else }}
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" />
   {{ end }}
