@@ -5,6 +5,13 @@
   <meta property="og:site_name" content={{ .Site.Title }} />
   <meta property="og:title" content={{ .Title }} />
   <meta property="og:description" content={{ .Description }} />
+  <meta property="og:url" content={{ .Permalink }} />
+  {{ if .Params.Date}}
+  <meta property="og:type" content="article" />
+  <meta property="og:published_time" content={{ .Date }} />
+  {{ else }}
+  <meta property="og:type" content="website" />
+  {{ end }}
   {{ if .Params.ogImage}}
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogImage }}" />
   {{ else }}
