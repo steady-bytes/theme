@@ -5,9 +5,9 @@
   <title>{{ .Title }}</title>
 
   {{ if (ne .Params.featureImage "")}}
-  <link rel="image_src" href={{ .Params.featureImage }} />
+  <link rel="image_src" href="/{{ .Params.featureImage }}" />
   {{ else }}
-  <link rel="image_src" href={{ .Site.Params.logo }} />
+  <link rel="image_src" href="/{{ .Site.Params.logo }}" />
   {{ end }}
 
   {{ if (ne .Site.Params.Analytics.plausibleDomain "")}}
