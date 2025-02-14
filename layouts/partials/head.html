@@ -2,13 +2,15 @@
   <meta charset="utf-8" />
   <meta name="description" content={{ .Description }}>
   <meta name="keywords" content={{ .Keywords }}>
-  <title>{{ .Title }}</title>
-
-  {{ if (ne .Params.featureImage "")}}
-  <link rel="image_src" href="/{{ .Params.featureImage }}" />
+  <meta property="og:title" content={{ .Title }} />
+  <meta property="og:description" content={{ .Description }} />
+  {{ if .Params.featureImage}}
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.featureImage }}" />
   {{ else }}
-  <link rel="image_src" href="/{{ .Site.Params.logo }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" />
   {{ end }}
+
+  <title>{{ .Title }}</title>
 
   {{ if (ne .Site.Params.Analytics.plausibleDomain "")}}
   <script defer data-domain={{ .Site.Params.Analytics.plausibleDomain }} src={{ .Site.Params.Analytics.plausibleSrc }}></script>
@@ -22,14 +24,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  {{ "<!-- Themify -->" | safeHTML }}
+  <!-- Themify -->
   <link rel="stylesheet" href="{{ "themify/themify.css" | absURL }}">
 
-  {{ "<!-- Critical CSS -->" | safeHTML }}
+  <!-- Critical CSS -->
   {{ $stylex := resources.Get "scss/critical.scss" | css.Sass | minify }}
   <link href="{{ $stylex.Permalink }}" rel="stylesheet" />
 
-  {{ "<!--Favicon-->" | safeHTML }}
+  <!--Favicon-->
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
   <link rel="icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
 </head>
