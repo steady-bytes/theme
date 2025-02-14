@@ -9,85 +9,27 @@
   }
 
   &-image {
-    &-shape1 {
-      left: -25%;
-      top: 10%;
-      color: $bg-color;
-      position: relative;
-    }
-    &-shape2 {
-      position: absolute;
-      z-index: -1;
-      right: -13%;
-      top: 45%;
-      color: $primary-color;
-    }
-    &-shape3 {
-      right: -25%;
-      top: 10%;
-      color: $primary-color;
-      position: relative;
-    }
-    &-shape4 {
-      position: absolute;
-      z-index: -1;
-      left: -20%;
-      top: 42%;
-      color: $bg-color;
-    }
-    &-focus {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
     img {
-      max-height: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      vertical-align: middle;
     }
-
-    &-shape1 {
-      @include desktop {
-        left: -13% !important;
-      }
-
-      @include tablet {
-        left: -17% !important;
-      }
+    @include desktop {
+      margin: 40 auto 40px;
+      width: 70%;
     }
-
-    &-shape2 {
-      @include desktop {
-        right: 5% !important;
-      }
-
-      @include tablet {
-        right: -10% !important;
-      }
+    @include tablet {
+      width: 80%;
     }
-
-    &-shape3 {
-      @include desktop {
-        right: -7% !important;
-      }
-
-      @include tablet {
-        right: -9% !important;
-      }
-    }
-
-    &-shape4 {
-      @include desktop {
-        left: -5% !important;
-      }
-
-      @include tablet {
-        left: -15% !important;
-      }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
   &-content {
+    margin-bottom: 150px;
+
     @include desktop {
       text-align: center;
       margin-bottom: 30px;
